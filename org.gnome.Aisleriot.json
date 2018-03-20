@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Aisleriot",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
+    "runtime-version": "3.28",
     "sdk": "org.gnome.Sdk",
     "command": "sol",
     "rename-appdata-file": "sol.appdata.xml",
@@ -90,8 +90,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/aisleriot/3.22/aisleriot-3.22.4.tar.xz",
-                    "sha256": "fe8dee3ad771ab778d37740a26410778aa5c61e8eb75dd42b9a5e5719c6e34fb"
+                    "url": "https://download.gnome.org/sources/aisleriot/3.22/aisleriot-3.22.5.tar.xz",
+                    "sha256": "f0c3d9c21e6a701442c1a18aec8fe524da68067fd95f10064125f692f54d8366"
                 }
             ]
         }
