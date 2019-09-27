@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Aisleriot",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
+    "runtime-version": "3.34",
     "sdk": "org.gnome.Sdk",
     "command": "sol",
     "rename-appdata-file": "sol.appdata.xml",
@@ -12,14 +12,8 @@
         "--share=ipc", "--socket=x11",
         "--socket=wayland",
         "--device=dri", "--socket=pulseaudio",
-        "--talk-name=org.gnome.GConf",
-        "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+        "--talk-name=org.gnome.GConf"
     ],
-    "build-options" : {
-        "cflags": "-O2 -g",
-        "cxxflags": "-O2 -g"
-    },
     "cleanup": [
         "/include", "/lib/pkgconfig",
         "/share/pkgconfig", "/share/aclocal",
@@ -27,32 +21,6 @@
         "*.la", "*.a"
     ],
     "modules": [
-        {
-            "name": "gc",
-            "cleanup": [
-              "/share"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "http://www.hboehm.info/gc/gc_source/gc-7.6.0.tar.gz",
-                    "sha256": "a14a28b1129be90e55cd6f71127ffc5594e1091d5d54131528c24cd0c03b7d90"
-                }
-            ]
-        },
-        {
-            "name": "libunistring",
-            "cleanup": [
-                "/share"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/libunistring/libunistring-0.9.8.tar.xz",
-                    "sha256": "7b9338cf52706facb2e18587dceda2fbc4a2a3519efa1e15a3f2a68193942f80"
-                }
-            ]
-        },
         {
             "name": "guile",
             "cleanup": ["/bin",
@@ -64,7 +32,30 @@
                     "url": "https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.xz",
                     "sha256": "8353a8849cd7aa77be66af04bd6bf7a6207440d2f8722e46672232bb9f0a4086"
               }
-            ]
+            ],
+            "modules":[{
+                    "name": "gc",
+                    "cleanup": [
+                      "/share"
+                    ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "http://www.hboehm.info/gc/gc_source/gc-7.6.0.tar.gz",
+                            "sha256": "a14a28b1129be90e55cd6f71127ffc5594e1091d5d54131528c24cd0c03b7d90"
+                        }
+                    ],
+                    "modules": [
+                        {
+                            "name": "libatomic_ops",
+                            "sources": [{
+                                "type": "archive",
+                                "url": "https://github.com/ivmai/libatomic_ops/archive/v7.6.10.tar.gz",
+                                "sha256": "e6b0909cf4e63cec693fe6c48191ce864c32c5113e16c3f517aa2a244b46992f"
+                            }]
+                        }
+                    ]
+            }]
         },
         {
             "name": "gconf",
@@ -80,6 +71,10 @@
                     "url": "https://download.gnome.org/sources/GConf/3.2/GConf-3.2.6.tar.xz",
                     "sha256": "1912b91803ab09a5eed34d364bf09fe3a2a9c96751fde03a4e0cfa51a04d784c"
                 }
+            ],
+            "modules": [
+                "shared-modules/dbus-glib/dbus-glib-0.110.json",
+                "shared-modules/intltool/intltool-0.51.json"
             ]
         },
         {
@@ -90,8 +85,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/aisleriot/3.22/aisleriot-3.22.6.tar.xz",
-                    "sha256": "239a707175bbf78c081dafb71b8cd124e08190a5cd865360d9e0cc3c167e5aa0"
+                    "url": "https://download.gnome.org/sources/aisleriot/3.22/aisleriot-3.22.9.tar.xz",
+                    "sha256": "51f2ffe4dd4f23349b033fd87aab7bf433641285719503dd7e52b2c25982ed7b"
                 }
             ]
         }
