@@ -25,7 +25,7 @@
             "name": "guile",
             "cleanup": ["/bin",
                         "/lib/libguile-2.2.so.1.3.0-gdb.scm"
-            ],            
+            ],
             "sources": [
               {
                     "type": "archive",
@@ -60,10 +60,10 @@
         {
             "name": "gconf",
             "cleanup": ["/bin", "/share/aclocal"],
-            "config-opts": [ "--disable-static", 
-                            "--disable-gtk-doc", 
+            "config-opts": [ "--disable-static",
+                            "--disable-gtk-doc",
                             "--disable-orbit",
-                            "--disable-introspection" 
+                            "--disable-introspection"
                         ],
             "sources": [
                 {
@@ -84,9 +84,10 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/aisleriot/3.22/aisleriot-3.22.9.tar.xz",
-                    "sha256": "51f2ffe4dd4f23349b033fd87aab7bf433641285719503dd7e52b2c25982ed7b"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/aisleriot.git",
+                    "tag": "3.22.13",
+                    "commit": "053f1d1264a4e22363109840fe3557cf4f88d3b6"
                 },
                 {
                     "type": "patch",
