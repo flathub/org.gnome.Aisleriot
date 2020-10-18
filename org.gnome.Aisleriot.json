@@ -79,9 +79,7 @@
         },
         {
             "name": "aisleriot",
-            "config-opts": [
-                "--with-card-theme-formats=svg"
-            ],
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "git",
