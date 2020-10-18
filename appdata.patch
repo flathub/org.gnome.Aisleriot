@@ -1,11 +1,13 @@
---- a/data/sol.appdata.xml.in	2019-09-09 21:51:48.000000000 +0200
-+++ b/data/sol.appdata.xml.in	2019-09-27 12:51:25.571094693 +0200
+diff --git a/data/sol.metainfo.xml.in b/data/sol.metainfo.xml.in
+index eac0c89f..a5646e3e 100644
+--- a/data/sol.metainfo.xml.in
++++ b/data/sol.metainfo.xml.in
 @@ -51,6 +51,10 @@
      <kudo>ModernToolkit</kudo>
      <kudo>UserDocs</kudo>
    </kudos>
 +  <releases>
-+    <release version="3.22.9" date="2019-09-09" />
++    <release version="3.22.13" date="2020-09-28" />
 +  </releases>
 +  <content_rating type="oars-1.0" />
    <url type="homepage">https://wiki.gnome.org/Apps/Aisleriot</url>

@@ -4,7 +4,7 @@
     "runtime-version": "3.38",
     "sdk": "org.gnome.Sdk",
     "command": "sol",
-    "rename-appdata-file": "sol.appdata.xml",
+    "rename-appdata-file": "sol.metainfo.xml",
     "rename-desktop-file": "sol.desktop",
     "rename-icon": "gnome-aisleriot",
     "copy-icon": true,
