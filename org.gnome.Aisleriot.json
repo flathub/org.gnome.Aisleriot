@@ -29,8 +29,8 @@
             "sources": [
               {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.xz",
-                    "sha256": "8353a8849cd7aa77be66af04bd6bf7a6207440d2f8722e46672232bb9f0a4086"
+                    "url": "https://ftp.gnu.org/gnu/guile/guile-3.0.4.tar.xz",
+                    "sha256": "6b7947dc2e3d115983846a268b8f5753c12fd5547e42fbf2b97d75a3b79f0d31"
               }
             ],
             "modules":[{
