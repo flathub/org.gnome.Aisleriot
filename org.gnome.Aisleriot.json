@@ -24,7 +24,7 @@
         {
             "name": "guile",
             "cleanup": ["/bin",
-                        "/lib/libguile-2.2.so.1.3.0-gdb.scm"
+                        "/lib/libguile-3.0.so.1.2.0-gdb.scm"
             ],
             "sources": [
               {
