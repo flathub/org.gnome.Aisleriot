@@ -96,7 +96,8 @@
             "name": "aisleriot",
             "buildsystem": "meson",
             "config-opts": [
-                "-Dtheme_kde=false"
+                "-Dtheme_kde=false",
+                "-Dgconf=true"
             ],
             "sources": [
                 {
