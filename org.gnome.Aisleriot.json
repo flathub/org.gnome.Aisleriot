@@ -80,6 +80,9 @@
         {
             "name": "aisleriot",
             "buildsystem": "meson",
+            "config-opts": [
+                "-Dtheme_kde=false"
+            ],
             "sources": [
                 {
                     "type": "git",
