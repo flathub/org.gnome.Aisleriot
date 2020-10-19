@@ -41,8 +41,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "http://www.hboehm.info/gc/gc_source/gc-7.6.0.tar.gz",
-                            "sha256": "a14a28b1129be90e55cd6f71127ffc5594e1091d5d54131528c24cd0c03b7d90"
+                            "url": "https://www.hboehm.info/gc/gc_source/gc-8.0.4.tar.gz",
+                            "sha256": "436a0ddc67b1ac0b0405b61a9675bca9e075c8156f4debd1d06f3a56c7cd289d"
                         }
                     ],
                     "modules": [
