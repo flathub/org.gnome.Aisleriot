@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Aisleriot",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "command": "sol",
     "rename-appdata-file": "sol.metainfo.xml",
@@ -107,8 +107,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/aisleriot.git",
-                    "tag": "3.22.13",
-                    "commit": "053f1d1264a4e22363109840fe3557cf4f88d3b6"
+                    "tag": "3.22.17",
+                    "commit": "bfd8b9849ac14d61dbc24163bd90f3045ea0a128"
                 },
                 {
                     "type": "patch",
