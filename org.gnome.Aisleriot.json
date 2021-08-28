@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Aisleriot",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "command": "sol",
     "rename-appdata-file": "sol.metainfo.xml",
@@ -77,25 +77,7 @@
                 "shared-modules/intltool/intltool-0.51.json"
             ]
         },
-        {
-            "name": "libcanberra",
-            "config-opts": [
-                "--disable-alsa",
-                "--disable-null",
-                "--disable-oss"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
-                    "sha256": "c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72"
-                },
-                {
-                    "type": "patch",
-                    "path": "wayland-fix.patch"
-                }
-            ]
-        },
+        "shared-modules/libcanberra/libcanberra.json",
         {
             "name": "aisleriot",
             "buildsystem": "meson",
@@ -107,8 +89,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/aisleriot.git",
-                    "tag": "3.22.13",
-                    "commit": "053f1d1264a4e22363109840fe3557cf4f88d3b6"
+                    "tag": "3.22.17",
+                    "commit": "bfd8b9849ac14d61dbc24163bd90f3045ea0a128"
                 },
                 {
                     "type": "patch",
