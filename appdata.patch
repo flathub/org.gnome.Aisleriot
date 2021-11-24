@@ -4,9 +4,8 @@ index eac0c89f..988b5948 100644
 +++ b/data/sol.metainfo.xml.in
 @@ -29,7 +29,6 @@
  -->
- <!-- FIXME: the xmlns for appdata is made-up -->
  <component
--  xmlns="https://www.freedesktop.org/standards/appdata/1.0"
+-  xmlns="https://specifications.freedesktop.org/metainfo/1.0"
    type="desktop">
    <id>sol.desktop</id>
    <metadata_license>GPL-3.0+ or GFDL-1.3-only</metadata_license>
