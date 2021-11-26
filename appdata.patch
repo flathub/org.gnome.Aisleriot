@@ -2,19 +2,20 @@ diff --git a/data/sol.metainfo.xml.in b/data/sol.metainfo.xml.in
 index eac0c89f..988b5948 100644
 --- a/data/sol.metainfo.xml.in
 +++ b/data/sol.metainfo.xml.in
-@@ -29,7 +29,6 @@
+@@ -28,7 +28,6 @@
+   If not, see <https://www.gnu.org/licenses/>.
  -->
  <component
 -  xmlns="https://specifications.freedesktop.org/metainfo/1.0"
    type="desktop">
    <id>sol.desktop</id>
    <metadata_license>GPL-3.0+ or GFDL-1.3-only</metadata_license>
-@@ -51,6 +50,10 @@
+@@ -50,6 +49,10 @@
      <kudo>ModernToolkit</kudo>
      <kudo>UserDocs</kudo>
    </kudos>
 +  <releases>
-+    <release version="3.22.13" date="2020-09-28" />
++    <release version="3.22.19" date="2020-10-30" />
 +  </releases>
 +  <content_rating type="oars-1.0" />
    <url type="homepage">https://wiki.gnome.org/Apps/Aisleriot</url>
