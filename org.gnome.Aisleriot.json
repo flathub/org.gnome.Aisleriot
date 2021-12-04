@@ -83,14 +83,14 @@
             "buildsystem": "meson",
             "config-opts": [
                 "-Dtheme_kde=false",
-                "-Dgconf=true"
+                "-Dgconf=false"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/aisleriot.git",
-                    "tag": "3.22.17",
-                    "commit": "bfd8b9849ac14d61dbc24163bd90f3045ea0a128"
+                    "tag": "3.22.19",
+                    "commit": "b4921e758c7764292a99cdd6de2013e6c5055c21"
                 },
                 {
                     "type": "patch",
