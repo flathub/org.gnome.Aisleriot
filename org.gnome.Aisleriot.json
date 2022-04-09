@@ -9,34 +9,43 @@
     "rename-icon": "gnome-aisleriot",
     "copy-icon": true,
     "finish-args": [
-        "--share=ipc", "--socket=x11",
+        "--share=ipc",
+        "--socket=fallback-x11",
         "--socket=wayland",
-        "--device=dri", "--socket=pulseaudio",
+        "--device=dri",
+        "--socket=pulseaudio",
         "--talk-name=org.gnome.GConf"
     ],
     "cleanup": [
-        "/include", "/lib/pkgconfig",
-        "/share/pkgconfig", "/share/aclocal",
-        "/man", "/share/man", "/share/gtk-doc",
-        "*.la", "*.a"
+        "/include",
+        "/lib/pkgconfig",
+        "/share/pkgconfig",
+        "/share/aclocal",
+        "/man",
+        "/share/man",
+        "/share/gtk-doc",
+        "*.la",
+        "*.a"
     ],
     "modules": [
         {
             "name": "guile",
-            "cleanup": ["/bin",
-                        "/lib/libguile-3.0.so.1.2.0-gdb.scm"
+            "cleanup": [
+                "/bin",
+                "/lib/libguile-3.0.so.1.2.0-gdb.scm"
             ],
             "sources": [
-              {
+                {
                     "type": "archive",
                     "url": "https://ftp.gnu.org/gnu/guile/guile-3.0.4.tar.xz",
                     "sha256": "6b7947dc2e3d115983846a268b8f5753c12fd5547e42fbf2b97d75a3b79f0d31"
-              }
+                }
             ],
-            "modules":[{
+            "modules":[
+                {
                     "name": "gc",
                     "cleanup": [
-                      "/share"
+                        "/share"
                     ],
                     "sources": [
                         {
@@ -48,23 +57,30 @@
                     "modules": [
                         {
                             "name": "libatomic_ops",
-                            "sources": [{
-                                "type": "archive",
-                                "url": "https://github.com/ivmai/libatomic_ops/archive/v7.6.10.tar.gz",
-                                "sha256": "e6b0909cf4e63cec693fe6c48191ce864c32c5113e16c3f517aa2a244b46992f"
-                            }]
+                            "sources": [
+                                {
+                                    "type": "archive",
+                                    "url": "https://github.com/ivmai/libatomic_ops/archive/v7.6.10.tar.gz",
+                                    "sha256": "e6b0909cf4e63cec693fe6c48191ce864c32c5113e16c3f517aa2a244b46992f"
+                                }
+                            ]
                         }
                     ]
-            }]
+                }
+            ]
         },
         {
             "name": "gconf",
-            "cleanup": ["/bin", "/share/aclocal"],
-            "config-opts": [ "--disable-static",
-                            "--disable-gtk-doc",
-                            "--disable-orbit",
-                            "--disable-introspection"
-                        ],
+            "cleanup": [
+                "/bin",
+                "/share/aclocal"
+            ],
+            "config-opts": [
+                "--disable-static",
+                "--disable-gtk-doc",
+                "--disable-orbit",
+                "--disable-introspection"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -73,7 +89,7 @@
                 }
             ],
             "modules": [
-                "shared-modules/dbus-glib/dbus-glib-0.110.json",
+                "shared-modules/dbus-glib/dbus-glib.json",
                 "shared-modules/intltool/intltool-0.51.json"
             ]
         },
