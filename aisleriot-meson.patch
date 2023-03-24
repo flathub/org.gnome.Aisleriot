@@ -1,0 +1,18 @@
+--- aisleriot/data/meson.build-orig	2023-03-24 13:17:57.926784867 -0400
++++ aisleriot/data/meson.build	2023-03-24 13:18:06.643923768 -0400
+@@ -18,7 +18,6 @@
+ metainfodir = ar_prefix / ar_datadir / 'metainfo'
+ 
+ i18n.merge_file(
+-  'sol.metainfo.xml',
+   input: 'sol.metainfo.xml.in',
+   output: '@BASENAME@',
+   po_dir: po_dir,
+@@ -35,7 +34,6 @@
+ )
+ 
+ i18n.merge_file(
+-  'sol.desktop',
+   input: desktop_in,
+   output: '@BASENAME@',
+   type: 'desktop',

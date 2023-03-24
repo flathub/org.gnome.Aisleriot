@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Aisleriot",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "44",
     "sdk": "org.gnome.Sdk",
     "command": "sol",
     "rename-appdata-file": "sol.metainfo.xml",
@@ -85,7 +85,10 @@
                 },
                 {
                     "type": "patch",
-                    "path": "appdata.patch"
+                    "paths": [
+                        "appdata.patch",
+                        "aisleriot-meson.patch"
+                    ]
                 }
             ]
         }
