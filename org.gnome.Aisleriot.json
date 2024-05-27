@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Aisleriot",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
     "command": "sol",
     "rename-appdata-file": "sol.metainfo.xml",
@@ -36,8 +36,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/guile/guile-3.0.4.tar.xz",
-                    "sha256": "6b7947dc2e3d115983846a268b8f5753c12fd5547e42fbf2b97d75a3b79f0d31"
+                    "url": "https://ftp.gnu.org/gnu/guile/guile-3.0.9.tar.xz",
+                    "sha256": "1a2625ac72b2366e95792f3fe758fd2df775b4044a90a4a9787326e66c0d750d"
                 }
             ],
             "modules":[
@@ -49,8 +49,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://www.hboehm.info/gc/gc_source/gc-8.0.4.tar.gz",
-                            "sha256": "436a0ddc67b1ac0b0405b61a9675bca9e075c8156f4debd1d06f3a56c7cd289d"
+                            "url": "https://www.hboehm.info/gc/gc_source/gc-8.2.4.tar.gz",
+                            "sha256": "3d0d3cdbe077403d3106bb40f0cbb563413d6efdbb2a7e1cd6886595dec48fc2"
                         }
                     ],
                     "modules": [
@@ -59,8 +59,8 @@
                             "sources": [
                                 {
                                     "type": "archive",
-                                    "url": "https://github.com/ivmai/libatomic_ops/archive/v7.6.10.tar.gz",
-                                    "sha256": "e6b0909cf4e63cec693fe6c48191ce864c32c5113e16c3f517aa2a244b46992f"
+                                    "url": "https://github.com/ivmai/libatomic_ops/releases/download/v7.6.16/libatomic_ops-7.6.16.tar.gz",
+                                    "sha256": "b06969a04b2f7f3f3034ff1ee90f11a8f90b5e321fc7091995eb7c24495278aa"
                                 }
                             ]
                         }
@@ -80,8 +80,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/aisleriot.git",
-                    "tag": "3.22.19",
-                    "commit": "b4921e758c7764292a99cdd6de2013e6c5055c21"
+                    "tag": "3.22.33",
+                    "commit": "92df82480fb7f329256847199451473099eb07d4"
                 },
                 {
                     "type": "patch",

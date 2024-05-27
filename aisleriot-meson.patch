@@ -1,18 +1,87 @@
---- aisleriot/data/meson.build-orig	2023-03-24 13:17:57.926784867 -0400
-+++ aisleriot/data/meson.build	2023-03-24 13:18:06.643923768 -0400
-@@ -18,7 +18,6 @@
- metainfodir = ar_prefix / ar_datadir / 'metainfo'
+diff --git a/data/meson.build b/data/meson.build
+index 7c5f31e..91b2c94 100644
+--- a/data/meson.build
++++ b/data/meson.build
+@@ -13,46 +13,31 @@
+ # You should have received a copy of the GNU General Public License
+ # along with this programme.  If not, see <https://www.gnu.org/licenses/>.
  
- i18n.merge_file(
--  'sol.metainfo.xml',
-   input: 'sol.metainfo.xml.in',
-   output: '@BASENAME@',
-   po_dir: po_dir,
-@@ -35,7 +34,6 @@
+-# Appstream data
+-
+-metainfo_its = [
+-  'metainfo.its',
+-]
+-
+-metainfodir = ar_prefix / ar_datadir / 'metainfo'
+-
+-i18n.itstool_join(
+-  input: 'sol.metainfo.xml.in',
+-  install: true,
+-  install_dir: metainfodir,
+-  install_tag: 'metadata',
+-  its_files: metainfo_its,
+-  mo_targets: gettext_targets[0],
+-  output: '@BASENAME@',
++desktop_file = i18n.merge_file(
++        input: 'sol.desktop.in',
++       output: 'sol.desktop',
++         type: 'desktop',
++       po_dir: '../po',
++      install: true,
++  install_dir: get_option('datadir') / 'applications'
  )
  
- i18n.merge_file(
+-# Desktop file
+-
+-desktopdatadir = ar_prefix / ar_datadir / 'applications'
+-
+-desktop_in = files(
+-  'sol.desktop.in',
+-)
+-
+-i18n.merge_file(
+-  input: desktop_in,
+-  output: '@BASENAME@',
+-  type: 'desktop',
+-  po_dir: po_dir,
+-  install: true,
+-  install_dir: desktopdatadir,
++desktop_utils = find_program('desktop-file-validate', required: false)
++if desktop_utils.found()
++  test('Validate desktop file', desktop_utils, args: [desktop_file])
++endif
++
++appstream_file = i18n.merge_file(
++        input: 'sol.metainfo.xml.in',
++       output: 'sol.metainfo.xml',
++       po_dir: '../po',
++      install: true,
++  install_dir: get_option('datadir') / 'metainfo'
+ )
+ 
+-meson.add_install_script(
+-  'meson_desktopfile.py',
+-  desktopdatadir,
 -  'sol.desktop',
-   input: desktop_in,
-   output: '@BASENAME@',
-   type: 'desktop',
+-)
++appstreamcli = find_program('appstreamcli', required: false, disabler: true)
++test('Validate appstream file', appstreamcli,
++     args: ['validate', '--no-net', '--explain', appstream_file])
+ 
+ # Valgrind suppressions
+ 
+diff --git a/meson.build b/meson.build
+index b1732cf..4f57cae 100644
+--- a/meson.build
++++ b/meson.build
+@@ -494,7 +494,6 @@ output += '  Debug UI:                ' + enable_debug_ui.to_string() + '\n'
+ output += '\n'
+ output += '  Distribution:            ' + distro + '\n'
+ output += '  Prefix:                  ' + get_option('prefix') + '\n'
+-output += '  Desktop data dir:        ' + desktopdatadir + '\n'
+ output += '  Schemas dir:             ' + schemadir + '\n'
+ output += '\n'
+ output += '  Card themes support:\n'
+--
+libgit2 1.7.2
+
