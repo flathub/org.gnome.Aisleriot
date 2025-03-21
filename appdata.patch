@@ -13,6 +13,15 @@ index 25319eb..6502655 100644
    <id>sol.desktop</id>
    <metadata_license>GPL-3.0+ or GFDL-1.3-only</metadata_license>
    <project_license>GPL-3.0+</project_license>
+@@ -42,7 +42,7 @@
+   </description>
+   <screenshots>
+     <screenshot type="default">
+-      <image type="source">https://wiki.gnome.org/Apps/Aisleriot?action=AttachFile&amp;do=get&amp;target=aisleriot-3.10.png</image>
++      <image type="source">https://gitlab.gnome.org/GNOME/aisleriot/-/raw/da27c5ff79220d7014a5eab817d0218b34f52d7a/data/aisleriot-3.10.png</image>
+     </screenshot>
+   </screenshots>
+   <kudos>
 @@ -50,12 +50,20 @@
      <kudo>ModernToolkit</kudo>
      <kudo>UserDocs</kudo>
