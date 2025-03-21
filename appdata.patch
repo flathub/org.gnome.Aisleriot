@@ -18,7 +18,7 @@ index 25319eb..6502655 100644
      <kudo>UserDocs</kudo>
    </kudos>
 +  <releases>
-+    <release version="3.22.35" date="2024-01-28" />
++    <release version="3.22.35" date="2025-01-28" />
 +  </releases>
    <url type="homepage">https://wiki.gnome.org/Apps/Aisleriot</url>
    <url type="bugtracker">https://gitlab.gnome.org/GNOME/aisleriot/issues</url>
