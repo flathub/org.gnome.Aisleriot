@@ -37,7 +37,12 @@
                 {
                     "type": "archive",
                     "url": "https://ftp.gnu.org/gnu/guile/guile-3.0.10.tar.xz",
-                    "sha256": "bd7168517fd526333446d4f7ab816527925634094fbd37322e17e2b8d8e76388"
+                    "sha256": "bd7168517fd526333446d4f7ab816527925634094fbd37322e17e2b8d8e76388",
+                    "x-checker-data": {
+			    "type": "anitya",
+			    "project-id": 1277,
+			    "url-template": "https://ftp.gnu.org/gnu/guile/guile-$version.tar.xz"
+			}
                 }
             ],
             "modules":[
@@ -50,7 +55,12 @@
                         {
                             "type": "archive",
                             "url": "https://www.hboehm.info/gc/gc_source/gc-8.2.8.tar.gz",
-                            "sha256": "7649020621cb26325e1fb5c8742590d92fb48ce5c259b502faf7d9fb5dabb160"
+                            "sha256": "7649020621cb26325e1fb5c8742590d92fb48ce5c259b502faf7d9fb5dabb160",
+                            "x-checker-data": {
+                                "type": "anitya",
+                                "project-id": 876,
+                                "url-template": "https://www.hboehm.info/gc/gc_source/gc-$version.tar.gz"
+                            }
                         }
                     ],
                     "modules": [
@@ -59,8 +69,13 @@
                             "sources": [
                                 {
                                     "type": "archive",
-                                    "url": "https://github.com/ivmai/libatomic_ops/releases/download/v7.6.16/libatomic_ops-7.6.16.tar.gz",
-                                    "sha256": "b06969a04b2f7f3f3034ff1ee90f11a8f90b5e321fc7091995eb7c24495278aa"
+                                    "url": "https://github.com/ivmai/libatomic_ops/archive/refs/tags/v7.8.2.tar.gz",
+                                    "sha256": "ad8428a40e01d41bc4ddad3166afa1fc175c9e58d8ef7ddbd7ef3298e32ac37b",
+				    "x-checker-data": {
+					    "type": "anitya",
+					    "project-id": 1561,
+					    "url-template": "https://github.com/ivmai/libatomic_ops/archive/refs/tags/v$version.tar.gz"
+					}
                                 }
                             ]
                         }
