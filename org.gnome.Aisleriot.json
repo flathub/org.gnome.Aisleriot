@@ -39,13 +39,13 @@
                     "url": "https://ftp.gnu.org/gnu/guile/guile-3.0.10.tar.xz",
                     "sha256": "bd7168517fd526333446d4f7ab816527925634094fbd37322e17e2b8d8e76388",
                     "x-checker-data": {
-			    "type": "anitya",
-			    "project-id": 1277,
-			    "url-template": "https://ftp.gnu.org/gnu/guile/guile-$version.tar.xz"
-			}
+                        "type": "anitya",
+                        "project-id": 1277,
+                        "url-template": "https://ftp.gnu.org/gnu/guile/guile-$version.tar.xz"
+                    }
                 }
             ],
-            "modules":[
+            "modules": [
                 {
                     "name": "gc",
                     "cleanup": [
@@ -71,11 +71,11 @@
                                     "type": "archive",
                                     "url": "https://github.com/ivmai/libatomic_ops/archive/refs/tags/v7.8.2.tar.gz",
                                     "sha256": "ad8428a40e01d41bc4ddad3166afa1fc175c9e58d8ef7ddbd7ef3298e32ac37b",
-				    "x-checker-data": {
-					    "type": "anitya",
-					    "project-id": 1561,
-					    "url-template": "https://github.com/ivmai/libatomic_ops/archive/refs/tags/v$version.tar.gz"
-					}
+                                    "x-checker-data": {
+                                        "type": "anitya",
+                                        "project-id": 1561,
+                                        "url-template": "https://github.com/ivmai/libatomic_ops/archive/refs/tags/v$version.tar.gz"
+                                    }
                                 }
                             ]
                         }
