@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Aisleriot",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "48",
+    "runtime-version": "49",
     "sdk": "org.gnome.Sdk",
     "command": "sol",
     "rename-appdata-file": "sol.metainfo.xml",
@@ -29,6 +29,9 @@
     "modules": [
         {
             "name": "guile",
+            "build-options": {
+                "cflags": "-std=gnu17"
+            },
             "cleanup": [
                 "/bin",
                 "/lib/libguile-3.0.so.1.2.0-gdb.scm"
