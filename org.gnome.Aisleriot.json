@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Aisleriot",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "48",
+    "runtime-version": "49",
     "sdk": "org.gnome.Sdk",
     "command": "sol",
     "rename-appdata-file": "sol.metainfo.xml",
@@ -29,6 +29,9 @@
     "modules": [
         {
             "name": "guile",
+            "build-options": {
+                "cflags": "-std=gnu17"
+            },
             "cleanup": [
                 "/bin",
                 "/lib/libguile-3.0.so.1.2.0-gdb.scm"
@@ -49,8 +52,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://www.hboehm.info/gc/gc_source/gc-8.2.8.tar.gz",
-                            "sha256": "7649020621cb26325e1fb5c8742590d92fb48ce5c259b502faf7d9fb5dabb160"
+                            "url": "https://github.com/bdwgc/bdwgc/releases/download/v8.2.10/gc-8.2.10.tar.gz",
+                            "sha256": "832cf4f7cf676b59582ed3b1bbd90a8d0e0ddbc3b11cb3b2096c5177ce39cc47"
                         }
                     ],
                     "modules": [
@@ -59,8 +62,8 @@
                             "sources": [
                                 {
                                     "type": "archive",
-                                    "url": "https://github.com/ivmai/libatomic_ops/releases/download/v7.6.16/libatomic_ops-7.6.16.tar.gz",
-                                    "sha256": "b06969a04b2f7f3f3034ff1ee90f11a8f90b5e321fc7091995eb7c24495278aa"
+                                    "url": "https://github.com/bdwgc/libatomic_ops/releases/download/v7.8.4/libatomic_ops-7.8.4.tar.gz",
+                                    "sha256": "2356e002e80ef695875e971d6a4fd8c61ca5c6fa4fd1bf31cce54a269c8bfcd5"
                                 }
                             ]
                         }
